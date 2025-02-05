@@ -1,0 +1,15 @@
+services:
+  php:
+    build:
+      context: docker/php/
+      dockerfile: php.Dockerfile
+    volumes:
+      - ./src:/app
+    ports:
+      - "1515:8000"
+#  composer:
+#    build:
+#      context: docker/composer/
+#      dockerfile: composer.Dockerfile
+#    volumes:
+#      - ./src:/app
