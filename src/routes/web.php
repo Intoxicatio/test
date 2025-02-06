@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FetchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/fetch', function () { return view('fetch'); });
+Route::post('/fetch/submit', [FetchController::class, 'submit'])->name('fetch.submit');

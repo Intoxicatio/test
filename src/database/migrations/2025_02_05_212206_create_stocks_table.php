@@ -21,8 +21,8 @@ class CreateStocksTable extends Migration
             $table->string('tech_size');
             $table->integer('barcode');
             $table->integer('quantity');
-            $table->string('is_supply');
-            $table->string('is_realization');
+            $table->boolean('is_supply');
+            $table->boolean('is_realization');
             $table->integer('quantity_full');
             $table->string('warehouse_name');
             $table->integer('in_way_to_client');
